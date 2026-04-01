@@ -2,567 +2,592 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Satyam Gupta – Resume</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satyam Gupta – Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-      font-size: 10.5px;
-      color: #1a1a1a;
-      background: #e8e8e8;
-    }
+        body {
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            font-size: 11px;
+            /* Slightly reduced to fit all content */
+            color: #1a1a1a;
+            background: #e8e8e8;
+        }
 
-    .page {
-      width: 210mm;
-      height: 297mm;
-      margin: 0 auto;
-      background: #ffffff;
-      display: grid;
-      grid-template-columns: 66mm 1fr;
-      overflow: hidden;
-    }
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background: #ffffff;
+            display: grid;
+            grid-template-columns: 72mm 1fr;
+            overflow: hidden;
+        }
 
-    /* ── SIDEBAR ── */
-    .sidebar {
-      background: #172040;
-      color: #dde5f4;
-      padding: 18px 14px 14px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 13px;
-    }
+        /* ── SIDEBAR ── */
+        .sidebar {
+            background: #172040;
+            color: #dde5f4;
+            padding: 22px 18px 18px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            /* Tightened gap */
+        }
 
-    .name-block {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-      padding-bottom: 11px;
-    }
+        .name-block {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+            padding-bottom: 14px;
+        }
 
-    .name-block h1 {
-      font-size: 17px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.2;
-    }
+        .name-block h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+        }
 
-    .name-block .role {
-      font-size: 9.2px;
-      font-weight: 500;
-      color: #79b4f5;
-      letter-spacing: 0.7px;
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
+        .name-block .role {
+            font-size: 10.5px;
+            font-weight: 500;
+            color: #79b4f5;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
 
-    .name-block .location {
-      font-size: 9px;
-      color: #8fa8c8;
-      margin-top: 3px;
-    }
+        .name-block .location {
+            font-size: 9.5px;
+            color: #8fa8c8;
+            margin-top: 4px;
+        }
 
-    .sidebar-section {}
+        .sidebar-section {}
 
-    .sidebar-section h3 {
-      font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: #79b4f5;
-      border-bottom: 1px solid rgba(121, 180, 245, 0.28);
-      padding-bottom: 3px;
-      margin-bottom: 8px;
-    }
+        .sidebar-section h3 {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #79b4f5;
+            border-bottom: 1px solid rgba(121, 180, 245, 0.28);
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
 
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 5px;
-      margin-bottom: 5px;
-      font-size: 9px;
-      color: #b8ccdf;
-      line-height: 1.4;
-    }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            margin-bottom: 6px;
+            font-size: 10px;
+            color: #b8ccdf;
+            line-height: 1.5;
+        }
 
-    .contact-item a {
-      color: #79b4f5;
-      text-decoration: none;
-      word-break: break-all;
-    }
+        .contact-item a {
+            color: #79b4f5;
+            text-decoration: none;
+            word-break: break-all;
+        }
 
-    .skill-group {
-      margin-bottom: 7px;
-    }
+        .skill-group {
+            margin-bottom: 10px;
+        }
 
-    .skill-group .skill-label {
-      font-size: 8.5px;
-      font-weight: 600;
-      color: #9fb8d0;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 3px;
-    }
+        .skill-group .skill-label {
+            font-size: 9px;
+            font-weight: 600;
+            color: #9fb8d0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
 
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3px;
-    }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
 
-    .tag {
-      background: rgba(121, 180, 245, 0.1);
-      border: 1px solid rgba(121, 180, 245, 0.22);
-      color: #c4d5ec;
-      font-size: 8.3px;
-      padding: 1.5px 5px;
-      border-radius: 3px;
-      line-height: 1.5;
-    }
+        .tag {
+            background: rgba(121, 180, 245, 0.1);
+            border: 1px solid rgba(121, 180, 245, 0.22);
+            color: #c4d5ec;
+            font-size: 9px;
+            padding: 2.5px 5.5px;
+            border-radius: 3px;
+            line-height: 1.5;
+        }
 
-    .edu-item .deg {
-      font-size: 9.5px;
-      font-weight: 600;
-      color: #d8e8f8;
-    }
+        .edu-item .deg {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #d8e8f8;
+        }
 
-    .edu-item .school {
-      font-size: 8.8px;
-      color: #8aa4c0;
-      margin-top: 1px;
-    }
+        .edu-item .school {
+            font-size: 9.5px;
+            color: #8aa4c0;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
 
-    .edu-item .year {
-      font-size: 8px;
-      color: #638aab;
-      margin-top: 1px;
-    }
+        .edu-item .year {
+            font-size: 8.5px;
+            color: #638aab;
+            margin-top: 2px;
+        }
 
-    .edu-item .gpa {
-      font-size: 8px;
-      color: #79b4f5;
-      margin-top: 1px;
-    }
+        .edu-item .gpa {
+            font-size: 8.5px;
+            color: #79b4f5;
+            margin-top: 2px;
+        }
 
-    .cert-item {
-      font-size: 8.8px;
-      color: #b4c8de;
-      margin-bottom: 5px;
-      line-height: 1.4;
-    }
+        .cert-item {
+            font-size: 9.5px;
+            color: #b4c8de;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
 
-    .cert-item .cert-issuer {
-      font-size: 8px;
-      color: #638aab;
-    }
+        .cert-item .cert-issuer {
+            font-size: 8.5px;
+            color: #638aab;
+            margin-top: 1.5px;
+        }
 
-    /* ── MAIN ── */
-    .main {
-      padding: 17px 18px 12px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-    }
+        /* ── MAIN ── */
+        .main {
+            padding: 20px 24px 16px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            /* Tightened gap to bring bottom section up */
+        }
 
-    .section h2 {
-      font-size: 9.5px;
-      font-weight: 700;
-      letter-spacing: 1.1px;
-      text-transform: uppercase;
-      color: #172040;
-      border-bottom: 1.5px solid #172040;
-      padding-bottom: 3px;
-      margin-bottom: 8px;
-    }
+        .section h2 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+            color: #172040;
+            border-bottom: 1.5px solid #172040;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+        }
 
-    .summary-text {
-      font-size: 9.8px;
-      color: #282828;
-      line-height: 1.65;
-    }
+        .summary-text {
+            font-size: 10.5px;
+            color: #282828;
+            line-height: 1.6;
+        }
 
-    .exp-item {
-      margin-bottom: 8px;
-    }
+        .exp-item {
+            margin-bottom: 12px;
+        }
 
-    .exp-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
 
-    .exp-role {
-      font-size: 10.5px;
-      font-weight: 700;
-      color: #111;
-    }
+        .exp-role {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #111;
+        }
 
-    .exp-company {
-      font-size: 9.5px;
-      font-weight: 600;
-      color: #172040;
-      margin-top: 1px;
-    }
+        .exp-company {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #172040;
+            margin-top: 2px;
+        }
 
-    .exp-date {
-      font-size: 8.5px;
-      color: #666;
-      white-space: nowrap;
-      margin-left: 8px;
-      padding-top: 1px;
-    }
+        .exp-date {
+            font-size: 9.5px;
+            color: #666;
+            white-space: nowrap;
+            margin-left: 8px;
+            padding-top: 1px;
+        }
 
-    .exp-list {
-      margin-top: 4px;
-      padding-left: 11px;
-      list-style: none;
-    }
+        .exp-list {
+            margin-top: 5px;
+            padding-left: 12px;
+            list-style: none;
+        }
 
-    .exp-list li {
-      font-size: 9.3px;
-      color: #282828;
-      line-height: 1.55;
-      margin-bottom: 2.5px;
-      position: relative;
-    }
+        .exp-list li {
+            font-size: 10px;
+            color: #282828;
+            line-height: 1.6;
+            margin-bottom: 4px;
+            position: relative;
+        }
 
-    .exp-list li::before {
-      content: "▸";
-      position: absolute;
-      left: -10px;
-      color: #172040;
-      font-size: 8.5px;
-      top: 1px;
-    }
+        .exp-list li::before {
+            content: "▸";
+            position: absolute;
+            left: -11px;
+            color: #172040;
+            font-size: 9px;
+            top: 1px;
+        }
 
-    .proj-item {
-      margin-bottom: 7px;
-    }
+        .proj-item {
+            margin-bottom: 11px;
+        }
 
-    .proj-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 3px;
-    }
+        .proj-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
 
-    .proj-name {
-      font-size: 10px;
-      font-weight: 700;
-      color: #111;
-    }
+        .proj-name {
+            font-size: 11px;
+            font-weight: 700;
+            color: #111;
+        }
 
-    .proj-link {
-      font-size: 8px;
-      color: #172040;
-      text-decoration: none;
-    }
+        .proj-link {
+            font-size: 9px;
+            color: #172040;
+            text-decoration: none;
+        }
 
-    .proj-tech {
-      font-size: 8.5px;
-      color: #555;
-      font-style: italic;
-      margin-top: 1.5px;
-    }
+        .proj-tech {
+            font-size: 9px;
+            color: #555;
+            font-style: italic;
+            margin-top: 2px;
+        }
 
-    .proj-desc {
-      font-size: 9px;
-      color: #282828;
-      line-height: 1.55;
-      margin-top: 2px;
-    }
+        .proj-desc {
+            font-size: 10px;
+            color: #282828;
+            line-height: 1.6;
+            margin-top: 3px;
+        }
 
-    .intern-label {
-      display: inline-block;
-      background: #e5edf8;
-      color: #172040;
-      font-size: 7.5px;
-      font-weight: 600;
-      padding: 1px 5px;
-      border-radius: 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-left: 5px;
-      vertical-align: middle;
-    }
+        .intern-label {
+            display: inline-block;
+            background: #e5edf8;
+            color: #172040;
+            font-size: 8px;
+            font-weight: 600;
+            padding: 1.5px 5px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
 
-    .ach-item {
-      font-size: 9.3px;
-      color: #282828;
-      line-height: 1.55;
-      margin-bottom: 3px;
-      position: relative;
-      padding-left: 12px;
-    }
+        .ach-item {
+            font-size: 10px;
+            color: #282828;
+            line-height: 1.6;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 12px;
+        }
 
-    .ach-item::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #172040;
-      font-size: 8.5px;
-      top: 1px;
-    }
+        .ach-item::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #172040;
+            font-size: 9px;
+            top: 1px;
+        }
 
-    @media print {
-      body {
-        background: white;
-      }
+        @media print {
+            body {
+                background: white;
+            }
 
-      .page {
-        margin: 0;
-        width: 210mm;
-        height: 297mm;
-      }
-    }
-  </style>
+            .page {
+                margin: 0;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="page">
+    <div class="page">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-      <div class="name-block">
-        <h1>Satyam Gupta</h1>
-        <div class="role">Software Engineer</div>
-        <div class="location">📍 Noida, Uttar Pradesh</div>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Contact</h3>
-        <div class="contact-item">
-          <span>📧</span>
-          <a href="mailto:devsatyamg@gmail.com">devsatyamg@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span>📧</span>
-          <a href="mailto:satyamgu@hcltech.com">satyamgu@hcltech.com</a>
-        </div>
-        <div class="contact-item">
-          <span>📞</span>
-          <span>+91 8303143266</span>
-        </div>
-        <div class="contact-item">
-          <span>💼</span>
-          <a href="https://linkedin.com/in/devsg/" target="_blank">linkedin.com/in/devsg</a>
-        </div>
-        <div class="contact-item">
-          <span>🐙</span>
-          <a href="https://github.com/SatyamGuptaDev" target="_blank">github.com/SatyamGuptaDev</a>
-        </div>
-        <div class="contact-item">
-          <span>🧩</span>
-          <a href="https://leetcode.com/devsg/" target="_blank">leetcode.com/devsg</a>
-        </div>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Skills</h3>
-        <div class="skill-group">
-          <div class="skill-label">Languages</div>
-          <div class="skill-tags">
-            <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
-            <span class="tag">Python</span><span class="tag">C++</span>
-            <span class="tag">Java</span><span class="tag">HTML &amp; CSS</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-label">Frontend</div>
-          <div class="skill-tags">
-            <span class="tag">React</span><span class="tag">Next.js</span>
-            <span class="tag">Redux</span><span class="tag">Tailwind CSS</span>
-            <span class="tag">Framer Motion</span><span class="tag">Chakra UI</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-label">Backend &amp; DB</div>
-          <div class="skill-tags">
-            <span class="tag">Node.js</span><span class="tag">Express.js</span>
-            <span class="tag">MongoDB</span><span class="tag">Supabase</span>
-            <span class="tag">Prisma</span><span class="tag">MySQL</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-label">Tools &amp; Others</div>
-          <div class="skill-tags">
-            <span class="tag">Git</span><span class="tag">REST APIs</span>
-            <span class="tag">Vite</span><span class="tag">Vercel</span>
-            <span class="tag">Vitest</span><span class="tag">GenAI / Prompting</span>
-            <span class="tag">Cursor IDE</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Education</h3>
-        <div class="edu-item">
-          <div class="deg">B.Tech – Computer Science</div>
-          <div class="school">Jaypee University of Engg. &amp; Technology, Guna</div>
-          <div class="year">2021 – 2025</div>
-          <div class="gpa">CGPA: 7.2</div>
-        </div>
-      </div>
-
-      <div class="sidebar-section">
-        <h3>Certifications</h3>
-        <div class="cert-item">The Web Developer Bootcamp
-          <div class="cert-issuer">Udemy · Colt Steele</div>
-        </div>
-        <div class="cert-item">Full Stack Web Development
-          <div class="cert-issuer">Infosys Springboard</div>
-        </div>
-        <div class="cert-item">GenAI L2 – Basic Prompt Engineering
-          <div class="cert-issuer">HCLTech Internal</div>
-        </div>
-        <div class="cert-item">Introduction to Generative AI
-          <div class="cert-issuer">HCLTech Internal</div>
-        </div>
-        <div class="cert-item">Java Programming &amp; OOPs
-          <div class="cert-issuer">Great Learning</div>
-        </div>
-      </div>
-
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main">
-
-      <div class="section">
-        <h2>Profile</h2>
-        <p class="summary-text">
-          Software Engineer at HCLTech with a genuine interest in building things for the web.
-          Comfortable working across the full stack — from crafting clean UIs in React and Next.js to connecting
-          backends and APIs.
-          Outside of work, I spend time on personal projects to explore new tools and stay current with how the web is
-          evolving.
-          Familiar with GenAI concepts through internal HCL training and real hands-on experimentation with AI-assisted
-          development.
-        </p>
-      </div>
-
-      <div class="section">
-        <h2>Work Experience</h2>
-
-        <div class="exp-item">
-          <div class="exp-header">
-            <div>
-              <div class="exp-role">Graduate Engineer Trainee</div>
-              <div class="exp-company">HCLTech · Noida</div>
+            <div class="name-block">
+                <h1>Satyam Gupta</h1>
+                <div class="role">Software Engineer</div>
+                <div class="location">📍 Noida, Uttar Pradesh</div>
             </div>
-            <div class="exp-date">Oct 2025 – Present</div>
-          </div>
-          <ul class="exp-list">
-            <li>Assigned to the <strong>Keysight Project</strong> — onboarded onto a large C++ codebase and went through
-              structured KT on LTE, 4G &amp; 5G telecom concepts.</li>
-            <li>Completed internal AI/ML certifications: <em>Generative AI L2, Basic Prompt Engineering, and STAR ERS
-                GenAI Consumer Training</em>.</li>
-            <li>Actively applying AI tools and prompt engineering knowledge to improve day-to-day development workflows.
-            </li>
-          </ul>
-        </div>
 
-        <div class="exp-item">
-          <div class="exp-header">
-            <div>
-              <div class="exp-role">Academic Trainee <span class="intern-label">Training</span></div>
-              <div class="exp-company">HCLTech · Noida</div>
+            <div class="sidebar-section">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:devsatyamg@gmail.com">devsatyamg@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:satyamgu@hcltech.com">satyamgu@hcltech.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📞</span>
+                    <span>+91 8303143266</span>
+                </div>
+                <div class="contact-item">
+                    <span>💼</span>
+                    <a href="https://linkedin.com/in/devsg/" target="_blank">linkedin.com/in/devsg</a>
+                </div>
+                <div class="contact-item">
+                    <span>🐙</span>
+                    <a href="https://github.com/SatyamGuptaDev" target="_blank">github.com/SatyamGuptaDev</a>
+                </div>
+                <div class="contact-item">
+                    <span>🧩</span>
+                    <a href="https://leetcode.com/devsg/" target="_blank">leetcode.com/devsg</a>
+                </div>
             </div>
-            <div class="exp-date">Mar 2025 – Sep 2025</div>
-          </div>
-          <ul class="exp-list">
-            <li>Completed 6-month structured induction covering C, C++, Python, Embedded Systems, and Computer
-              Networking.</li>
-            <li>Picked up professional software development practices and got comfortable with enterprise-level tooling
-              and workflows.</li>
-          </ul>
-        </div>
 
-        <div class="exp-item">
-          <div class="exp-header">
-            <div>
-              <div class="exp-role">Frontend Developer Intern <span class="intern-label">Internship</span></div>
-              <div class="exp-company">Legabyte Innovations · Remote</div>
+            <div class="sidebar-section">
+                <h3>Skills</h3>
+                <div class="skill-group">
+                    <div class="skill-label">Languages</div>
+                    <div class="skill-tags">
+                        <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+                        <span class="tag">Python</span><span class="tag">C++</span>
+                        <span class="tag">Java</span><span class="tag">HTML &amp; CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="tag">React</span><span class="tag">Next.js</span>
+                        <span class="tag">Redux</span><span class="tag">Tailwind CSS</span>
+                        <span class="tag">Framer Motion</span><span class="tag">Chakra UI</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label">Backend &amp; DB</div>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span><span class="tag">Express.js</span>
+                        <span class="tag">MongoDB</span><span class="tag">Supabase</span>
+                        <span class="tag">Prisma</span><span class="tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-label">Tools &amp; Others</div>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span><span class="tag">REST APIs</span>
+                        <span class="tag">Vite</span><span class="tag">Vercel</span>
+                        <span class="tag">Vitest</span><span class="tag">GenAI / Prompting</span>
+                        <span class="tag">Cursor IDE</span>
+                    </div>
+                </div>
             </div>
-            <div class="exp-date">May 2024 – Jul 2024</div>
-          </div>
-          <ul class="exp-list">
-            <li>Built a responsive web app frontend using Next.js and Tailwind CSS; worked closely with the team across
-              design and dev cycles.</li>
-            <li>Focused on making the app fast and smooth across all screen sizes — mobile through desktop.</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="section">
-        <h2>Projects</h2>
+            <div class="sidebar-section">
+                <h3>Education</h3>
+                <div class="edu-item">
+                    <div class="deg">B.Tech – Computer Science</div>
+                    <div class="school">Jaypee University of Engg. &amp; Technology, Guna</div>
+                    <div class="year">2021 – 2025</div>
+                    <div class="gpa">CGPA: 7.2</div>
+                </div>
+            </div>
 
-        <div class="proj-item">
-          <div class="proj-header">
-            <span class="proj-name">ArticleX — Thread &amp; Article Saving Platform</span>
-            <a class="proj-link" href="https://article-x-nine.vercel.app/" target="_blank">Live ↗</a>
-          </div>
-          <div class="proj-tech">React · TypeScript · Vite · Tailwind CSS · Supabase · Framer Motion</div>
-          <div class="proj-desc">Content-saving platform to preview and curate Twitter/X threads into organised
-            collections. Built offline sync with auto-recovery, Supabase cloud storage, PDF/DOCX export, Razorpay
-            integration, and a polished dark/light UI with smooth animations.</div>
-        </div>
+            <div class="sidebar-section">
+                <h3>Certifications</h3>
+                <div class="cert-item">The Web Developer Bootcamp
+                    <div class="cert-issuer">Udemy · Colt Steele</div>
+                </div>
+                <div class="cert-item">Full Stack Web Development
+                    <div class="cert-issuer">Infosys Springboard</div>
+                </div>
+                <div class="cert-item">GenAI L2 – Basic Prompt Engineering
+                    <div class="cert-issuer">HCLTech Internal</div>
+                </div>
+                <div class="cert-item">Introduction to Generative AI
+                    <div class="cert-issuer">HCLTech Internal</div>
+                </div>
+                <div class="cert-item">Java Programming &amp; OOPs
+                    <div class="cert-issuer">Great Learning</div>
+                </div>
+            </div>
 
-        <div class="proj-item">
-          <div class="proj-header">
-            <span class="proj-name">AETHERA — Browser Music Playground</span>
-            <a class="proj-link" href="https://aethera-chi.vercel.app/" target="_blank">Live ↗</a>
-          </div>
-          <div class="proj-tech">Next.js · TypeScript · Tailwind CSS · Framer Motion · Web Audio API · Vitest</div>
-          <div class="proj-desc">Interactive browser music app with 6 virtual instruments, jam session mode, and audio
-            recording. Developed with AI-assisted workflows using Claude and Cursor IDE. Fully responsive across devices
-            with animated canvas visuals and Vitest unit tests.</div>
-        </div>
+        </aside>
 
-        <div class="proj-item">
-          <div class="proj-header">
-            <span class="proj-name">Real-time Streaming Platform</span>
-            <a class="proj-link" href="https://github.com/SatyamGuptaDev/real-time-streaming-platform"
-              target="_blank">github · Live ↗</a>
-          </div>
-          <div class="proj-tech">Next.js · TypeScript · Prisma · Clerk · NeonDB · LiveKit</div>
-          <div class="proj-desc">Live streaming platform with auth, live viewer count, interactive chat, customisable
-            layouts, and a streamer dashboard — deployed on Vercel.</div>
-        </div>
+        <main class="main">
 
-        <div class="proj-item">
-          <div class="proj-header">
-            <span class="proj-name">BetterMart — E-Commerce Platform</span>
-            <a class="proj-link" href="https://github.com/SatyamGuptaDev/Better_Mart" target="_blank">github · Live
-              ↗</a>
-          </div>
-          <div class="proj-tech">React · Redux · Chakra UI · Express.js · MongoDB · Node.js</div>
-          <div class="proj-desc">Full-stack e-commerce app with user auth, product management, order processing,
-            real-time chat, and Razorpay payment gateway integration.</div>
-        </div>
-      </div>
+            <div class="section">
+                <h2>Profile</h2>
+                <p class="summary-text">
+                    Software Engineer at HCLTech with a genuine interest in building things for the web.
+                    Comfortable working across the full stack — from crafting clean UIs in React and Next.js to
+                    connecting
+                    backends and APIs.
+                    Outside of work, I spend time on personal projects to explore new tools and stay current with how
+                    the web is
+                    evolving.
+                    Familiar with GenAI concepts through internal HCL training and real hands-on experimentation with
+                    AI-assisted
+                    development.
+                </p>
+            </div>
 
-      <div class="section">
-        <h2>Achievements &amp; Activities</h2>
-        <div class="ach-item">Solved <strong>200+ problems</strong> on LeetCode and GeeksforGeeks — consistent practice
-          in DSA and algorithmic thinking.</div>
-        <div class="ach-item">Selected for <strong>Phase 1 of Smart India Hackathon</strong> at JUET Guna — one of the
-          teams shortlisted from the college for the national round.</div>
-        <div class="ach-item">Coordinator at <strong>Art &amp; Events Club, JUET (2021–23)</strong> — helped organise
-          D'Equinox 2022 college fest and several campus events end-to-end.</div>
-      </div>
+            <div class="section">
+                <h2>Work Experience</h2>
 
-    </main>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-role">Graduate Engineer Trainee</div>
+                            <div class="exp-company">HCLTech · Noida</div>
+                        </div>
+                        <div class="exp-date">Oct 2025 – Present</div>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Assigned to the <strong>Keysight Project</strong> — onboarded onto a large C++ codebase and
+                            went through
+                            structured KT on LTE, 4G &amp; 5G telecom concepts.</li>
+                        <li>Completed internal AI/ML certifications: <em>Generative AI L2, Basic Prompt Engineering, and
+                                STAR ERS
+                                GenAI Consumer Training</em>.</li>
+                        <li>Actively applying AI tools and prompt engineering knowledge to improve day-to-day
+                            development workflows.
+                        </li>
+                    </ul>
+                </div>
 
-  </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-role">Academic Trainee <span class="intern-label">Training</span></div>
+                            <div class="exp-company">HCLTech · Noida</div>
+                        </div>
+                        <div class="exp-date">Mar 2025 – Sep 2025</div>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Completed 6-month structured induction covering C, C++, Python, Embedded Systems, and
+                            Computer
+                            Networking.</li>
+                        <li>Picked up professional software development practices and got comfortable with
+                            enterprise-level tooling
+                            and workflows.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-role">Frontend Developer Intern <span class="intern-label">Internship</span>
+                            </div>
+                            <div class="exp-company">Legabyte Innovations · Remote</div>
+                        </div>
+                        <div class="exp-date">May 2024 – Jul 2024</div>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Built a responsive web app frontend using Next.js and Tailwind CSS; worked closely with the
+                            team across
+                            design and dev cycles.</li>
+                        <li>Focused on making the app fast and smooth across all screen sizes — mobile through desktop.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Projects</h2>
+
+                <div class="proj-item">
+                    <div class="proj-header">
+                        <span class="proj-name">ArticleX — Thread &amp; Article Saving Platform</span>
+                        <a class="proj-link" href="https://article-x-nine.vercel.app/" target="_blank">Live ↗</a>
+                    </div>
+                    <div class="proj-tech">React · TypeScript · Vite · Tailwind CSS · Supabase · Framer Motion</div>
+                    <div class="proj-desc">Content-saving platform to preview and curate Twitter/X threads into
+                        organised
+                        collections. Built offline sync with auto-recovery, Supabase cloud storage, PDF/DOCX export,
+                        Razorpay
+                        integration, and a polished dark/light UI with smooth animations.</div>
+                </div>
+
+                <div class="proj-item">
+                    <div class="proj-header">
+                        <span class="proj-name">AETHERA — Browser Music Playground</span>
+                        <a class="proj-link" href="https://aethera-chi.vercel.app/" target="_blank">Live ↗</a>
+                    </div>
+                    <div class="proj-tech">Next.js · TypeScript · Tailwind CSS · Framer Motion · Web Audio API · Vitest
+                    </div>
+                    <div class="proj-desc">Interactive browser music app with 6 virtual instruments, jam session mode,
+                        and audio
+                        recording. Developed with AI-assisted workflows using Claude and Cursor IDE. Fully responsive
+                        across devices
+                        with animated canvas visuals and Vitest unit tests.</div>
+                </div>
+
+                <div class="proj-item">
+                    <div class="proj-header">
+                        <span class="proj-name">Real-time Streaming Platform</span>
+                        <a class="proj-link" href="https://github.com/SatyamGuptaDev/real-time-streaming-platform"
+                            target="_blank">github · Live ↗</a>
+                    </div>
+                    <div class="proj-tech">Next.js · TypeScript · Prisma · Clerk · NeonDB · LiveKit</div>
+                    <div class="proj-desc">Live streaming platform with auth, live viewer count, interactive chat,
+                        customisable
+                        layouts, and a streamer dashboard — deployed on Vercel.</div>
+                </div>
+
+                <div class="proj-item">
+                    <div class="proj-header">
+                        <span class="proj-name">BetterMart — E-Commerce Platform</span>
+                        <a class="proj-link" href="https://github.com/SatyamGuptaDev/Better_Mart" target="_blank">github
+                            · Live
+                            ↗</a>
+                    </div>
+                    <div class="proj-tech">React · Redux · Chakra UI · Express.js · MongoDB · Node.js</div>
+                    <div class="proj-desc">Full-stack e-commerce app with user auth, product management, order
+                        processing,
+                        real-time chat, and Razorpay payment gateway integration.</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Achievements &amp; Activities</h2>
+                <div class="ach-item">Solved <strong>200+ problems</strong> on LeetCode and GeeksforGeeks — consistent
+                    practice
+                    in DSA and algorithmic thinking.</div>
+                <div class="ach-item">Selected for <strong>Phase 1 of Smart India Hackathon</strong> at JUET Guna — one
+                    of the
+                    teams shortlisted from the college for the national round.</div>
+                <div class="ach-item">Coordinator at <strong>Art &amp; Events Club, JUET (2021–23)</strong> — helped
+                    organise
+                    D'Equinox 2022 college fest and several campus events end-to-end.</div>
+            </div>
+
+        </main>
+
+    </div>
 </body>
 
 </html>
